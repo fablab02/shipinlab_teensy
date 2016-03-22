@@ -363,6 +363,11 @@ void setup()
 	lcd.setCursor(0, 1);
 	lcd.print(F("Starting in..."));
 	lcd.setCursor(0, 2);
+        while(gpsReader.m_lastFix == 0){ 
+            lcd.setCursor(0, 2);
+            lcd.print(F("Wait GPS fix..."));
+      	    gpsReader.readNextFrame();
+        }
 	for (int i = 10; i > 0; i--)
 	{
 		lcd.print(i);

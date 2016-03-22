@@ -14,6 +14,7 @@ class GpsReader {
     void error();
     void debug();
     double readDouble();
+    int getOneInt();
     
 
 
@@ -21,6 +22,7 @@ class GpsReader {
 public:
     double m_lastLatitudeDeg;
     double m_lastLongitudeDeg;
+    int m_lastFix;
     
     GpsReader();
 
